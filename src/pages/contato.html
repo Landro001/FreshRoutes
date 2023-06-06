@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobilidade Urbana - Contato</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Montserrat:700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="logoDiv">
+            <img src="../imagens/logoDesenho.png" alt="Logo" class="logoDesenho" style="width: 60px; padding-right: 3rem;">
+            <a href="../../index.html">Início</a>
+        </div>
+        <a href="problema.html">Problema</a>
+        <a href="solucao.html">Solução</a>
+        <a href="impactos.html">Impactos</a>
+        <a href="parceiros.html">Parceiros</a>
+        <a href="quemSomos.html">Quem Somos</a>
+        <a href="contato.html">Contato</a>     
+    </header>
+
+    <main>
+        <h1>Contato</h1>
+
+        <section id="contato">
+            <p>Entre em contato conosco preenchendo o formulário abaixo:</p>
+            <form id="contato-form" onsubmit="submitForm(event)">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <br>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+                <br>
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+        
+    </main>
+</body>
+
+<script>
+    function submitForm(event) {
+        event.preventDefault();
+        var form = document.getElementById('contato-form');
+        var nome = document.getElementById('nome');
+        var email = document.getElementById('email');
+        var mensagem = document.getElementById('mensagem');
+
+        if (!nome.value || !email.value || !mensagem.value) {
+            alert('Preencha todos os campos.');
+            return;
+        }
+
+        var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!regex.test(email.value)) {
+            alert('Insira um e-mail válido.');
+            return;
+        }
+
+        alert('Mensagem enviada em ' + new Date().toLocaleString());
+
+        form.reset();
+    }
+</script>
+
+</html>

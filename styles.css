@@ -8,7 +8,7 @@ html {
 }
 
 * {
-  color: var(--cor-preta);;
+  color: var(--cor-preta);
 }
 
 body {
@@ -60,7 +60,8 @@ main {
   margin: -1.35rem auto 2rem auto;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: 'Montserrat', sans-serif;
   padding: 2rem;
 }
@@ -81,7 +82,7 @@ h1, h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  
+
 }
 
 .cardImpactos {
@@ -199,14 +200,14 @@ footer {
   text-align: center;
   border-top: 2px solid #e7e7e7;
   display: flex;
-  color: #6c757d; /* Alinhar os itens horizontalmente */
+  color: #6c757d;
   align-items: center;
 }
 
 .footer-content {
   width: 100%;
-  display: flex; 
-  flex-direction: row; 
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-around;
 }
@@ -220,9 +221,11 @@ footer {
 .carousel {
   position: relative;
 }
+
 .carousel img {
   display: none;
 }
+
 .carousel img.active {
   display: block;
 }
@@ -304,4 +307,101 @@ footer {
 
 .card-problema {
   width: 43rem;
+}
+
+header img {
+  width: 60px;
+  padding-right: 3rem;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .logoDiv {
+    flex-direction: column;
+  }
+
+  header img {
+    padding-right: 0;
+  }
+
+  main {
+    max-width: 90%;
+    margin: 1rem auto;
+  }
+
+  .text-content {
+    width: 90%;
+  }
+
+  .main-impactos {
+    flex-direction: column;
+  }
+
+  .cardImpactos {
+    width: 100%;
+    margin: 0;
+  }
+
+  li {
+    width: 100%;
+  }
+
+  img {
+    max-width: 90%;
+  }
+
+  form {
+    max-width: 100%;
+  }
+
+  .cardParceiros {
+    width: 100%;
+  }
+
+  .equipe {
+    flex-direction: column;
+  }
+
+  .parceiros {
+    flex-direction: column;
+  }
+
+  .login-container {
+    flex-direction: column;
+  }
+
+  .problemas-content {
+    flex-direction: column;
+  }
+
+  .card-problema {
+    width: 100%;
+  }
+
+  #nome,
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    width: 85%;
+    justify-content: center;
+    display: flex;
+    margin-left: 1rem;
+  }
+
+  .login-form {
+    align-items: center;
+  }
+
+  #contato-form label,
+  #contato-form input[type="submit"] {
+    margin-left: 1rem;
+  }
+
+  .footer-icon img {
+    margin-left: 1rem;
+  }
 }

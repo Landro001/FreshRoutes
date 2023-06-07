@@ -7,63 +7,119 @@
     <title>FreshRoutes - Problema</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Montserrat:700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../styles.css">
-
+    <script src="../../script.js"></script>
 </head>
 
 <body>
     <header>
         <div class="logoDiv">
-            <img src="../imagens/logoDesenho.png" alt="Logo" class="logoDesenho" style="width: 60px; padding-right: 3rem;">
+            <img src="../imagens/logoDesenho.png" alt="Logo" class="logoDesenho"
+                style="width: 60px; padding-right: 3rem;">
             <a href="../../index.html">Início</a>
         </div>
         <a href="problema.html">Problema</a>
-        <a href="solucao.html">Solução</a>
         <a href="impactos.html">Impactos</a>
         <a href="parceiros.html">Parceiros</a>
         <a href="quemSomos.html">Quem Somos</a>
-        <a href="contato.html">Contato</a>     
+        <a href="contato.html">Contato</a>
+        <a href="login.html">Login</a>
+        <button class="dark-mode-btn" id="darkModeBtn" onclick="alterarCor()">Dark Mode</button>
     </header>
 
     <main>
         <h1>Problema</h1>
-        
+
         <section id="problema">
-            <p>O desperdício de alimentos é um problema significativo que tem impactos negativos tanto em termos
-                sociais quanto ambientais. Grandes quantidades de alimentos são descartados diariamente devido a 
-                problemas como prazos de validade curtos, danos durante o transporte, e até mesmo preferências estéticas.
-                Este desperdício contribui para a fome e insegurança alimentar, além de contribuir para as mudanças climáticas
+            <p class="text-content">O desperdício de alimentos é um problema significativo que tem impactos negativos
+                tanto em termos
+                sociais quanto ambientais. Grandes quantidades de alimentos são descartados diariamente devido a
+                problemas como prazos de validade curtos, danos durante o transporte, e até mesmo preferências
+                estéticas.
+                Este desperdício contribui para a fome e insegurança alimentar, além de contribuir para as mudanças
+                climáticas
                 através da produção desnecessária de gases de efeito estufa.</p>
 
-            <img src="../imagens/desperdicio.jpg" alt="Desperdício de Alimentos">
+            <div class="carousel">
+                <img src="../imagens/desperdicio.jpg" alt="Desperdício de Alimentos" class="active">
+                <img src="../imagens/desperdicio1.jpg" alt="Desperdício de Alimentos">
+                <img src="../imagens/desperdicio2.jpg" alt="Desperdício de Alimentos">
+            </div>
         </section>
 
-        <section>
-            <h2>Validade Curta</h2>
-            <p>Muitos alimentos são descartados por terem um prazo de validade curto. Este é um problema particularmente 
-                grave para frutas e vegetais frescos, que muitas vezes são jogados fora enquanto ainda estão bons para o consumo.</p>
-        </section>
+        <div class="problemas-content">
+            <div class="card-problema">
+                <section>
+                    <h2>Validade Curta</h2>
+                    <p class="text-content">Muitos alimentos são descartados por terem um prazo de validade curto. Este
+                        é um
+                        problema particularmente
+                        grave para frutas e vegetais frescos, que muitas vezes são jogados fora enquanto ainda estão
+                        bons
+                        para o consumo.</p>
+                </section>
 
-        <section>
-            <h2>Perdas Durante o Transporte</h2>
-            <p>Outro problema comum é o dano que ocorre durante o transporte de alimentos. As condições inadequadas 
-                de transporte podem levar a danos físicos nos alimentos, tornando-os indesejáveis para os consumidores e levando ao seu descarte.</p>
-        </section>
+                <section>
+                    <h2>Perdas Durante o Transporte</h2>
+                    <p class="text-content">Outro problema comum é o dano que ocorre durante o transporte de alimentos.
+                        As
+                        condições inadequadas
+                        de transporte podem levar a danos físicos nos alimentos, tornando-os indesejáveis para os
+                        consumidores e levando ao seu descarte.</p>
+                </section>
+            </div>
 
-        <section>
-            <h2>Preferências Estéticas</h2>
-            <p>Alimentos que não atendem aos padrões estéticos, mesmo que estejam perfeitamente bons para consumo, 
-                também são frequentemente descartados. Isso inclui frutas e vegetais com formas ou cores incomuns.</p>
-        </section>
+            <div class="card-problema">
+                <section>
+                    <h2>Preferências Estéticas</h2>
+                    <p class="text-content">Alimentos que não atendem aos padrões estéticos, mesmo que estejam
+                        perfeitamente
+                        bons para consumo,
+                        também são frequentemente descartados. Isso inclui frutas e vegetais com formas ou cores
+                        incomuns.
+                    </p>
+                </section>
 
-        <section>
-            <h2>Impactos Sociais e Ambientais</h2>
-            <p>As consequências do desperdício de alimentos são sentidas tanto no âmbito social quanto no ambiental. 
-                No âmbito social, contribui para a insegurança alimentar, pois os alimentos que poderiam ser consumidos 
-                acabam indo para o lixo. Ambientalmente, a produção de alimentos que não serão consumidos contribui para 
-                a emissão de gases de efeito estufa, o uso desnecessário de água e a perda de biodiversidade.</p>
-        </section>
+                <section>
+                    <h2>Impactos Sociais e Ambientais</h2>
+                    <p class="text-content">As consequências do desperdício de alimentos são sentidas tanto no âmbito
+                        social
+                        quanto no ambiental.
+                        No âmbito social, contribui para a insegurança alimentar, pois os alimentos que poderiam ser
+                        consumidos
+                        acabam indo para o lixo. Ambientalmente, a produção de alimentos que não serão consumidos
+                        contribui
+                        para
+                        a emissão de gases de efeito estufa, o uso desnecessário de água e a perda de biodiversidade.
+                    </p>
+                </section>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-icon">
+                    <img src="../imagens/logoDesenho.png" alt="Logo" class="logoDesenho"
+                        style="width: 60px; margin-right: 2rem;">
+                    <p>FreshRoutes &copy; 2023</p>
+                </div>
+                <p id="datetime"></p>
+            </div>
+        </footer>
     </main>
 
 </body>
+
+<script>
+    var images = document.querySelectorAll('.carousel img');
+    var currentIndex = 0;
+    var interval = setInterval(function () {
+        images[currentIndex].classList.remove('active');
+        currentIndex++;
+        if (currentIndex == images.length) {
+            currentIndex = 0;
+        }
+        images[currentIndex].classList.add('active');
+    }, 2000); // Altera a imagem a cada 2 segundos
+</script>
 
 </html>

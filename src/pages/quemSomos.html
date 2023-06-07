@@ -7,7 +7,7 @@
     <title>FreshRoutes - Quem Somos</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Montserrat:700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../styles.css">
-
+    <script src="../../script.js"></script>
 </head>
 
 <body>
@@ -18,22 +18,23 @@
             <a href="../../index.html">Início</a>
         </div>
         <a href="problema.html">Problema</a>
-        <a href="solucao.html">Solução</a>
         <a href="impactos.html">Impactos</a>
         <a href="parceiros.html">Parceiros</a>
         <a href="quemSomos.html">Quem Somos</a>
         <a href="contato.html">Contato</a>
+        <a href="login.html">Login</a>
+        <button class="dark-mode-btn" id="darkModeBtn" onclick="alterarCor()">Dark Mode</button>
     </header>
 
     <main>
         <h1>Quem somos</h1>
         
         <section id="quemSomos">
-            <p>
+            <p class="text-content">
                 FreshRoutes é uma empresa inovadora focada em desenvolver soluções de tecnologia avançada para o transporte de alimentos, fundada em 2023. Nosso principal objetivo é reduzir o desperdício de alimentos e melhorar a segurança alimentar através de logística inteligente e otimizada.
             </p>
             
-            <p>
+            <p class="text-content">
                 Acreditamos que a utilização de tecnologias avançadas, como inteligência artificial e análise de dados em tempo real, é essencial para transformar o setor de transporte de alimentos. Trabalhamos incansavelmente para desenvolver soluções que não só reduzam o desperdício de alimentos, mas também melhorem a qualidade e a segurança dos produtos entregues aos consumidores.
             </p>
         </section>
@@ -74,6 +75,15 @@
 
         </section>
 
+    <footer>
+            <div class="footer-content">
+                <div class="footer-icon">
+                    <img src="../imagens/logoDesenho.png" alt="Logo" class="logoDesenho" style="width: 60px; margin-right: 2rem;">
+                    <p>FreshRoutes &copy; 2023</p>
+                </div>
+                <p id="datetime"></p>
+            </div>
+        </footer>
     </main>
 
 </body>

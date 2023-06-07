@@ -4,31 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobilidade Urbana - Contato</title>
+    <title>FreshRoutes - Contato</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Montserrat:700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../styles.css">
-
+    <script src="../../script.js"></script>
 </head>
 
 <body>
     <header>
         <div class="logoDiv">
-            <img src="../imagens/logoDesenho.png" alt="Logo" class="logoDesenho" style="width: 60px; padding-right: 3rem;">
+            <img src="../imagens/logoDesenho.png" alt="Logo" class="logoDesenho"
+                style="width: 60px; padding-right: 3rem;">
             <a href="../../index.html">Início</a>
         </div>
         <a href="problema.html">Problema</a>
-        <a href="solucao.html">Solução</a>
         <a href="impactos.html">Impactos</a>
         <a href="parceiros.html">Parceiros</a>
         <a href="quemSomos.html">Quem Somos</a>
-        <a href="contato.html">Contato</a>     
+        <a href="contato.html">Contato</a>
+        <a href="login.html">Login</a>
+        <button class="dark-mode-btn" id="darkModeBtn" onclick="alterarCor()">Dark Mode</button>
     </header>
 
     <main>
         <h1>Contato</h1>
 
         <section id="contato">
-            <p>Entre em contato conosco preenchendo o formulário abaixo:</p>
+            <p class="text-content">Entre em contato conosco preenchendo o formulário abaixo:</p>
             <form id="contato-form" onsubmit="submitForm(event)">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required>
@@ -36,39 +38,59 @@
                 <label for="email">E-mail:</label>
                 <input type="email" id="email" name="email" required>
                 <br>
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+                <br>
                 <label for="mensagem">Mensagem:</label>
                 <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
                 <br>
                 <input type="submit" value="Enviar">
             </form>
         </section>
-        
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-icon">
+                    <img src="../imagens/logoDesenho.png" alt="Logo" class="logoDesenho" style="width: 60px; margin-right: 2rem;">
+                    <p>FreshRoutes &copy; 2023</p>
+                </div>
+                <p id="datetime"></p>
+            </div>
+        </footer>
     </main>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            var form = document.getElementById('contato-form');
+            var nome = document.getElementById('nome');
+            var email = document.getElementById('email');
+            var telefone = document.getElementById('telefone');
+            var mensagem = document.getElementById('mensagem');
+
+            if (!nome.value || !email.value || !telefone.value || !mensagem.value) {
+                alert('Preencha todos os campos.');
+                return;
+            }
+
+            var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!regex.test(email.value)) {
+                alert('Insira um e-mail válido.');
+                return;
+            }
+
+            alert('Mensagem enviada em ' + new Date().toLocaleString());
+
+            form.reset();
+        }
+
+        function updateTime() {
+            var dt = new Date();
+            document.getElementById("datetime").innerHTML = dt.toLocaleString();
+        }
+
+        setInterval(updateTime, 1000);
+    </script>
 </body>
-
-<script>
-    function submitForm(event) {
-        event.preventDefault();
-        var form = document.getElementById('contato-form');
-        var nome = document.getElementById('nome');
-        var email = document.getElementById('email');
-        var mensagem = document.getElementById('mensagem');
-
-        if (!nome.value || !email.value || !mensagem.value) {
-            alert('Preencha todos os campos.');
-            return;
-        }
-
-        var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!regex.test(email.value)) {
-            alert('Insira um e-mail válido.');
-            return;
-        }
-
-        alert('Mensagem enviada em ' + new Date().toLocaleString());
-
-        form.reset();
-    }
-</script>
 
 </html>
